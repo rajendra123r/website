@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Clickable Image with Google Maps API</title>
+  <style> 
+
+    
+  
+    #map {padding: 0px;
+              height: 600px;
+              width: 450%;
+              margin-top: 60px;
+            }
+        html{
+            scroll-behavior: smooth;
+            scroll-padding: 5rem;
+        }
+        * {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        
+        
+      }
+        
+        body{
+    background-color:rgb(228, 228, 228);
+    /* flex-wrap: wrap;
+    flex: 50%; */
+        }
+        
+        
+        .box{
+            height: 78px;
+            width: 98.9vw;
+            background-color: #f88d08;
+            position: absolute;
+            
+            
+        }
+        .box img {
+            
+            height: 76px;
+        }
+        /*.map{
+            width: 98.9vw;
+            height: 88vh;
+            position: absolute;
+            top: 78px;
+        }*/
+        .boxIn{
+             height: 100%;
+            width: auto;
+            display:inline-flex;
+            position: absolute;
+            right: 10px;
+        }
+        .boxIn a{
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-weight: 600;
+            padding: 17px;
+            padding-top: 29px;
+            /* border-radius: 20px; */
+             }
+        .boxIn a:hover{
+            /* background-color: #323131; */
+            color: rgb(22, 16, 16);
+        }
+        
+       .abt{
+        
+        position: absolute;
+        height: auto;
+        width: 94vw;
+        background-color: #ffffff;
+        /* line-height: 30px; */
+        margin-top: 12px;
+        text-align: center;
+        left: 20px;
+        border-radius: 12px;
+        padding: 20px;
+
+       }
+       p{
+        padding: 5px;
+        
+       }
+       .in1 , .in1_2{display: inline-block;}
+       .in1_2 img{
+        
+        border-radius: 12px;
+       }
+       .but{
+        position: fixed;
+        right: 0;
+        bottom: 38%;
+        z-index: 1;
+        display: block;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        text-align: center;
+        border: 1px solid #8c69ff;
+        border-radius: 4px 0 0 4px;
+        border-right: 0px;
+       }
+       .but img{margin: 18px 16px ;
+        height: 10px;
+        width: 20px;    vertical-align: middle;border: 0;
+       }
+       .img1{
+        float: right;
+       }
+        </style>
+    
+
+
+
+
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7wtDt63vIjzwJ4ugOczeafcMk-vlkIig&callback=initMap" async defer></script>
+  <script>
+     
+    function initMap() {
+      var mapOptions = {
+        center: { lat: 24.5955556, lng: 73.7362037 },
+        zoom: 16, // Adjust the zoom level as needed
+        mapTypeId: google.maps.MapTypeId.HYBRID//we can remove this property to remove map setalite view
+      };
+
+      var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+      // Replace 'path/to/your/image.jpg' with the path to your image
+      var image = {
+        url: 'cse.png',
+        scaledSize: new google.maps.Size(80, 80), // Adjust the size of the image marker
+        
+      };
+
+      var marker = new google.maps.Marker({
+        position: {  lat: 24.5954528,  lng: 73.7350859}, // Adjust the position of the marker
+        map: map,
+        icon: image,
+        title: 'cse department',
+      });
+
+      // Open a new page when the marker is clicked
+      marker.addListener('click', function () {
+        window.open('cse.html', '_blank');
+      });
+//from here i am adding new markers on department
+var imageelectrical = {
+        url: 'electrical.png',
+        scaledSize: new google.maps.Size(80, 80), // Adjust the size of the image marker
+        
+      };
+
+      var markerelectrical = new google.maps.Marker({
+        position: {  lat: 24.5976722, lng: 73.7357725}, // Adjust the position of the marker
+        map: map,
+        icon: imageelectrical,
+        title: 'electrical department',
+      });
+
+// Open a new page when the marker is clicked
+markerelectrical.addListener('click', function () {
+        window.open('electrical.html', '_blank');
+      });
+
+//mining department
+var imagemining = {
+        url: 'mining.png',
+        scaledSize: new google.maps.Size(80, 80), // Adjust the size of the image marker
+        
+      };
+
+      var markermining = new google.maps.Marker({
+        position: {  lat: 24.5981453, lng:  73.7337273}, // Adjust the position of the marker
+        map: map,
+        icon: imagemining,
+        title: 'mining department',
+      });
+
+      // Open a new page when the marker is clicked
+      markermining.addListener('click', function () {
+        window.open('minning.html', '_blank');
+      });
+      //mechanical department
+      var imagemechanical = {
+        url: 'mechanical1.png',
+        scaledSize: new google.maps.Size(80, 80), // Adjust the size of the image marker
+        
+      };
+
+      var markermechanical = new google.maps.Marker({
+        position: {  lat: 24.5979910, lng: 73.7350892}, // Adjust the position of the marker
+        map: map,
+        icon: imagemechanical,
+        title: 'Mechanical department',
+      });
+
+      // Open a new page when the marker is clicked
+      markermechanical.addListener('click', function () {
+        window.open('mechanical.html', '_blank');
+      });
+      //agriculture department
+      var imageagriculture = {
+        url: 'agriculture.png',
+        scaledSize: new google.maps.Size(80, 80), // Adjust the size of the image marker
+        
+      };
+
+      var marker = new google.maps.Marker({
+        position: {  lat: 24.5959406,  lng:  73.7354359}, // Adjust the position of the marker
+        map: map,
+        icon: imageagriculture,
+        title: 'Agriculture department',
+      });
+
+      // Open a new page when the marker is clicked
+      marker.addListener('click', function () {
+        window.open('agriculture.html', '_blank');
+      });
+//ece department
+var image = {
+        url: 'ece.png',
+        scaledSize: new google.maps.Size(80, 80), // Adjust the size of the image marker
+        
+      };
+
+      var marker = new google.maps.Marker({
+        position: {  lat: 24.5906778,   lng: 73.7385325}, // Adjust the position of the marker
+        map: map,
+        icon: image,
+        title: 'ece department',
+      });
+
+      // Open a new page when the marker is clicked
+      marker.addListener('click', function () {
+        window.open('ece.html', '_blank');
+      });
+
+      //this is canteen
+var image = {
+        url: 'canteenLOGO.png',
+        scaledSize: new google.maps.Size(80, 80), // Adjust the size of the image marker
+        
+      };
+
+      var marker = new google.maps.Marker({
+        position: {  lat: 24.5970853,   lng: 73.7343677}, // Adjust the position of the marker
+        map: map,
+        icon: image,
+        title: 'Canteen of CTAE',
+      });
+
+      // Open a new page when the marker is clicked
+      marker.addListener('click', function () {
+        window.open('canteen.html', '_blank');
+      });
+
+      
+    }
+  </script>
+  <style>
+    #map {
+      height: 650px;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body> 
+  <div class="but"><button onclick="ScrollToTop()"><img src="top.png" alt=""></button></div>
+  <div class="box"> <img src="./mpuat.png" alt="">
+  <div class="boxIn">
+      <a href="#About" class="aForBoxIn"> ABOUT CTAE</a>
+      <a href="#Dean" class="aForBoxIn"> DEAN</a>
+      <a href="https://www.ctae.ac.in/singlePage.php?id=112&type=DP" class="aForBoxIn"> COURSES</a>
+      <a href="https://www.ctae.ac.in/singlePage.php?id=9&type=DP" class="aForBoxIn"> PLACEMENT</a>
+  </div></div>
+  
+  /*here was iframe */
+  
+  <div id="map"></div>   
+  
+  <div class="abt" id="About" style="top: 745px; background-color: #ffffff">
+      <div class="in1" data-aos="fade-left" style=" width: 64%;">
+
+          <h2 style="padding: 2px;">About CTAE</h2>
+         
+           <p>The College of Technology and Engineering, Udaipur (CTAE) is a constituent college of the Maharana Pratap University of Agriculture and Technology, Udaipur. The college was started in 1964 with a Graduate Programme in Agricultural Engineering. Presently the CTAE has undergraduate degree programmes in 7 branches, M.Tech. programmes in 10 disciplines, besides PhD programmes in 10 disciplines.
+      <br>
+      The college has been recognized as Outstanding Engineering College in Northern Region and has been awarded “Outstanding Institution Award” in 2013 by National Institute of Technical Teachers Training and Research, Chandigarh (a Ministry of Human Resource and Development, Government of India, Institute). A project funded by Ministry of Human Resources Development through World Bank on “Technical Education Quality Improvement Project (TEQIP-II)” worth INR 10.0 crore is also functional in this college with the objectives of strengthening laboratories, developing smart-class rooms, enriching college library by procuring, books, e-books and subscribing to journals and undertaking several activities to increase the quality of teaching.
+      <br>
+      The college has dynamic curriculum at par with best in the country, qualified & dedicated faculty, supportive staff and excellent infrastructure, the college is preferred destination of top ranking students of the State. The college has been witnessing excellent placement by top recruiters in the country.
+      <br>
+      It is situated at about 7 km from Udaipur city railway station and bus terminal and 2 km from Rana Pratap Nagar railway station. </p>
+    </div>
+      <div class="in1_2" style="width: 34%;" data-aos="fade-right">
+          <img class="img1" src="2.jpg " alt="" style="height: 285px; width: 450px;">
+      </div>
+  </div>
+
+  <div class="abt" id="About" style="top: 1110px; background-color: #ffffff;">
+      <div class="in1_2" style="width: 34%;" data-aos="fade-right">
+          <img src="img1jpeg.jpeg" alt="" style="width: 470px;
+          height: 225px;">
+      </div>
+     <div class="in1" data-aos="fade-left" style=" width: 64%;"> <p>
+      The college has its own play grounds and courts for all games including a mini gymnasium. The nearby university sports complex is also available for the students. The Facilities of bank, post office, and canteen are also there in the college campus. <br>
+      The agricultural engineering departments have excellent experiential learning facilities to provide hands-on experience to build practical skills and entrepreneurship among the students. A modern Instructional farm of about 17 ha is used to impart practical training to the students in the operation of farm machines and equipment, modern irrigation and drainage system and processing operations. The farm has a poly-house for the purpose of teaching and research. A modern Agro-Meteorological Observatory is located on the instructional farm. The college also has a Soil and Water Conservation Demonstration Centre of about 100 ha with model watershed in which all the technologies of soil and water conservation and water harvesting have been developed to impart practical training to the students, farmers, field functionaries and officers working in the field of watershed management. <br>
+      The computer center of the college has excellent facilities for conducting the practicals and imparting training to students. 24x7 internet connectivity with 155 mbps through NKN is provided using OFC backbone. All the academic buildings and hostels have Wi-Fi facility. Besides, all departments have well developed computer labs with subject specific modern software. <br>  </p></div>
+     
+  </div> 
+
+  <div class="abt" id="Dean" style="top: 1414px; background-color: #ffffff;">
+      <div class="in1" data-aos="fade-left" style=" width: 64%;">
+          <h2 style="padding: 2px;">DEAN</h2><p>
+          <h3>Prof. P.K. Singh</h3>
+          <h5>  (Joined as Dean on 16th June 2021)</h5>
+          Dr P.K.Singh, B.Tech.(Agril.Engg), M.E.(SWC Engineering), Ph.D, is working as Professor in the Department of Soil & Water Engineering, College of Technology & Engineering, Maharana Pratap University of Agriculture & Technology, Udaipur since 1988. He has 33 years of teaching, research and extension experience in the field of Soil and Water Engineering. He has authored 10 books, 17 book chapters, 8 technical bulletins  in the field of Soil & Water Conservation and Watershed Management and published 139 research papers in the National and International Journals. He has guided 40 M.Tech. and 8 Ph.D students. He is Principal Investigator of two Research Projects and handled nine Consultancy Projects funded under Corporate Social Responsibility  and Central Water Commission, Government of India.
+      <br>
+       </p></div>
+      <div class="in1_2" style="width: 34%;" data-aos="fade-right">
+          <img src="./dean.jpg"  alt="" style="height: 220px; width: 100%;">
+      </div>
+  </div>
+  
+  <script>
+      function ScrollToTop(){
+        window.scrollTo(0,0);
+      }
+    </script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+AOS.init({
+  duration: 800,
+});
+</script>
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+
+

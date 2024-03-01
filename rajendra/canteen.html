@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    HTML{
+      scroll-behavior: smooth;
+    }
+    *{
+      box-sizing: border-box;
+    }
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      
+    }
+    .header{
+      position: sticky;
+      top: 0;
+      left: 0;
+      background-color: #3c4d8d;
+      padding: 60px;
+      text-align: center;
+      color: white;
+    }
+    .navbar{
+       position: sticky;
+       top: 198px;
+       justify-content: space-around;
+      
+      display: flex;
+      background-color: #333;
+    }
+    .navbar a{
+     
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-align: center;
+    }
+    .navbar a:hover {
+  /* background-color: #ddd; */
+  color:  #3c4d8d;
+}
+.row{
+  
+  display: flex;
+  flex-wrap: wrap;
+}
+.side{
+  
+  flex: 10%;
+  background-color:  #3c4d8d;
+  /* background-color: #f1f1f1; */
+  padding: 20px;
+  height: 700px;
+  
+}
+.main {
+  
+  flex: 90%;
+  background-color: white;
+  padding: 40px;
+  
+}
+/* .fakeimg {
+  background-color: #aaa;
+  float: right;
+  width: 100%;
+  padding: 20px;  } */
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  width: 100%;
+}
+
+@media screen and (max-width:700px) {
+  .row, .navbar{
+    flex-direction: column;
+  }
+  
+}
+#header1{
+  position: absolute;
+  left: 80px;
+  top: 40px;
+  
+  
+}
+#img1{
+  float: left;
+  border: 5px  #3c4d8d solid;
+  margin: 10px;
+  size: 20%;
+  
+}
+#img2{
+  float: right;
+  border: 5px  #3c4d8d solid;
+  margin: 10px;
+  size: 20%;
+}
+.p1{
+  line-height: 30px;
+}
+
+    /* Button Styles */
+    .custom-button {
+      /* display: inline-block; */
+      padding: 5px 20px;
+      font-size: 16px;
+      text-align: center;
+      text-decoration: none;
+      background-color: #3c4e8de9;
+      color: #fff;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Button Hover Animation */
+    .custom-button:hover {
+      background-color: #2980b9;
+    }
+    .boxForTeacher{
+      position:absolute;
+      top: 1000px;
+      height: 600px;
+      width: 1236px;
+      background-color:whitesmoke;
+      right: 80px;
+      border-radius: 12px;
+      padding-bottom: 12px;
+    }
+    
+
+    .boxForTeIn h3,.boxForTeIn2 h3{padding-top: 20px;}
+    .boxForTeIn{      height:209px ;
+      width: 199.2px;
+      bottom: 307px; text-align: center;
+      position: inherit;
+      background-color: #346852; border-radius: 5px;}
+      .boxForTeIn2{      height:209px ;
+      width: 199.2px;
+      bottom:35px; text-align: center;
+      position: inherit;
+      background-color: #836338; border-radius: 5px;}
+    #BoxForIn1,#BoxForIn2,#BoxForIn3{width: 100%;background-color:#3c4d8d;position: inherit;}
+    #BoxForIn1{
+      border-radius: 12px 12px 0px 0px;
+      height: 50px; 
+      top: 0px;
+      text-align: center;
+      color: white;
+    }
+    #BoxForIn3{
+      border-radius: 0px 0px 12px 12px;
+    }
+    #BoxForIn2, #BoxForIn3{
+      height: 70px;
+    }
+    
+    #BoxForIn13,#BoxForIn8{
+      left: 996.8px;
+    }
+    #BoxForIn12,#BoxForIn7{
+      left: 757.6px;
+    }
+    #BoxForIn11,#BoxForIn6{
+      left: 518.4px;
+    }
+    #BoxForIn10,#BoxForIn5{
+      left: 279.2px;
+    }
+    #BoxForIn9,#BoxForIn4{
+      left: 40px;
+    }
+    /* #Faculty{
+      position: absolute;
+      top: 1000px;
+      right: 100px;
+
+    } */
+    table {
+            font-family: Arial, sans-serif;
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            text-align: center;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+   
+
+
+
+
+  </style>
+</head>
+<body>
+  <!-- Note -->
+<!-- <div style="background:yellow;padding:5px">
+  <h4 style="text-align:center">Resize the browser window to see the responsive effect.</h4>
+</div> -->
+
+<!-- Header -->
+<div class="header">
+  <h1> Canteen Of Ctae Udaipur </h1>
+  <img id="header1" src="./logo-mpuat.png" alt="Image">
+  <!-- <p>With a <b>flexible</b> layout.</p> -->
+</div>
+
+<!-- Navigation Bar -->
+<div class="navbar" id="navbar1">
+  <a href="./index.html">Home</a>
+  <a href="#canteen">Menu</a>
+  <a href="https://www.ctae.ac.in/singlePage.php?id=4&type=DP">Review</a>
+  <a href="#con">Contact</a>
+</div>
+
+<!-- The flexible grid (content) -->
+<div class="row"> 
+  <div class="side">
+    <!-- <p><a href="#Faculty" class="custom-button">Menu</a></p> -->
+    <!-- <p><a href="#Faculty" class="custom-button">F</a></p> -->
+    <!-- <h2>About Me</h2>
+    <h5>Head Of Department:</h5>
+    <div class="fakeimg" style="height:200px;"></div>
+    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    <h3>More Text</h3>
+    <p>Lorem ipsum dolor sit ame.</p>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <div class="fakeimg" style="height:60px;">Image</div> -->
+    <!-- <h2>About Me</h2>
+    <h5>Head Of Department:</h5>
+    <div class="fakeimg" style="height:200px;"></div>
+    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    <h3>More Text</h3>
+    <p>Lorem ipsum dolor sit ame.</p>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <div class="fakeimg" style="height:60px;">Image</div> -->
+  </div>
+  <div class="main">
+    <h2>ABOUT CANTEEN</h2>
+    <!-- <h5>Title description, Dec 7, 2017</h5> -->
+    <div class="fakeimg">
+     <p> <img id="img1" src="./canteen.jpg" alt="Image" style="height: 200px;"></p>
+     <p class="p1">🍔 Savor the Flavor: Dive into a world of deliciousness at our canteen! From mouthwatering burgers to savory sandwiches, our menu is designed to tantalize your taste buds.
+        🌮 Tasty Tidbits: Explore a variety of snacks and tidbits that make for the perfect munchies. Whether you're craving something sweet or salty, we've got the snack to satisfy your cravings..</p>
+     <p><img id="img2"  src="./saosa.jpg" alt="Image" style="height: 300px;"></p>
+     <p class="p1">🥗 Fresh and Healthy: Our commitment to your well-being is reflected in our fresh and healthy options. Enjoy crisp salads, hearty soups, and wholesome meals prepared with care.
+
+        🍜 Global Delights: Embark on a culinary journey with our diverse range of global delights. From Italian pastas to Asian stir-fries, we bring the world to your plate..</p>
+     <p class="p1">🥤 Quench Your Thirst: Wash down your meal with our refreshing selection of beverages. From classic sodas to exotic smoothies, we've got the perfect drink to complement your dish.
+
+        🍰 Sweet Endings: Indulge your sweet tooth with our tempting desserts. From decadent cakes to delightful pastries, our desserts are the perfect finale to your meal.
+        
+        🌟 Specials and Promotions: Keep an eye out for our specials and promotions! We love surprising our customers with unique offerings and great deals.
+        
+        👨‍🍳 Chef's Recommendations: Trust the expertise of our chefs and explore their special recommendations. They're crafted with passion and guaranteed to satisfy your culinary cravings.
+        
+        📢 Feedback Corner: Your opinion matters! We value your feedback to continually enhance our offerings. Drop by our feedback corner or reach out online to share your thoughts.</p>
+     <!-- <div class="boxForTeacher" id="Faculty">
+      <div id="BoxForIn1"><h2>Faculties</h2></div>
+      <div id="BoxForIn2" style="top: 258px;"></div>
+      <div id="BoxForIn3" style="bottom:0px;"></div>
+      <div class="boxForTeIn" id="BoxForIn4" ><h3>Dr. Naveen Choudhary</h3><h5>(Professor & Head)</h5><h6>M.Tech (Computer Science & Engineering).IIT, guwahati</h6></div>
+      <div class="boxForTeIn" id="BoxForIn5" ><h3>Dr. Kalpana Jain</h3><h5>(Assistant Professor)</h5><h6>Ph.D (Computer Science & Engineering), MPUAT, Udaipur <br><br>M.Tech (Computer Science & Engineering), MPUAT, Udaipur</h6></div>
+      <div class="boxForTeIn" id="BoxForIn6" ><h3>Kuldeep Derashri</h3><h5>3 years of exp.</h5><h6>M. Tech., B. Tech. (CSE)</h6></div>
+      <div class="boxForTeIn" id="BoxForIn7" ><h3>Aakansha Joshi</h3><h5>	 6 years exp.</h5><h6>M. Tech. (CS), B. Tech. (IT)</h6></div>
+      <div class="boxForTeIn" id="BoxForIn8" ><h3> Anshita Dharmawat</h3><h5> 5 years exp.</h5><h6>M. Tech., B. Tech. (CSE)</h6></div>
+      <div class="boxForTeIn2" id="BoxForIn9"><h3>Garima Jain</h3><h5>	 10 years exp.</h5><h6>M. Tech., B. Tech. (CSE)</h6></div>
+      <div class="boxForTeIn2" id="BoxForIn10"><h3> Daulat Kuwar Chouhan</h3><h5>M. Tech., B. Tech. (CSE)</h5></div>
+      <div class="boxForTeIn2" id="BoxForIn11"><h3>Jyoti  Chouhan</h3><h5>	M. Tech., B. Tech. (CSE)</h5></div>
+      <div class="boxForTeIn2" id="BoxForIn12"><h3>	 Kriti Sharma</h3><h5>	 4 years exp.</h5><h6>M. Tech.(CSE), B. Tech. (IT)</h6></div>
+      <div class="boxForTeIn2" id="BoxForIn13"><h3>Pallavi Joshi</h3><h5>	 12 years exp.</h5><h6>	M. Tech. (IT), B. Tech. (CSE)</h6></div>
+    </div>
+      </div> -->
+     
+    <!-- <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <br>
+    <h2>TITLE HEADING</h2>
+    <h5>Title description, Sep 2, 2017</h5> -->
+    
+    
+    <!-- <div class="fakeimg" style="height:200px;">Image</div> -->
+    <!-- <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p> -->
+    <h2 id="canteen">Food Menu</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>FOOD</th>
+                <th>PRICE</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>Samosa</td>
+                <td>Rs. 10</td>
+               
+            </tr>
+            <tr>
+                <td>Cupcakes</td>
+                <td>Rs. 20</td>
+             
+            </tr>
+            <tr>
+                <td>Tea</td>
+                <td>Rs. 10</td>
+         
+            </tr>
+            <tr>
+                <td>Coffee</td>
+                <td>Rs. 20</td>
+               
+            </tr>
+            <tr>
+                <td>Green Tea</td>
+                <td>Rs. 30</td>
+               
+            </tr>
+            <tr>
+                <td>Rice Bowl</td>
+                <td>Rs.20 </td>
+               
+            </tr>
+            <tr>
+                <td>Oatmeal</td>
+                <td>Rs.30 </td>
+               
+            </tr>
+            <tr>
+                <td>Crispy Salad</td>
+                <td>Rs. 15</td>
+               
+            </tr>
+            <tr>
+                <td>Burger</td>
+                <td>Rs. 50</td>
+               
+            </tr>
+            <tr>
+                <td>Pizza</td>
+                <td>Rs. 110</td>
+               
+            </tr>
+        </tbody>
+    </table>
+
+  </div>
+
+</div>
+
+
+<!-- Footer --> 
+<div class="footer">
+  <h2 id="con">Contact</h2>
+  <p>Phone Number : 7976464326</p>
+</div>
+  
+</body>
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    HTML {
+      scroll-behavior: smooth;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      left: 0;
+      background-color: #3c4d8d;
+      padding: 60px;
+      text-align: center;
+      color: white;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 198px;
+      justify-content: space-around;
+
+      display: flex;
+      background-color: #333;
+    }
+
+    .navbar a {
+
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .navbar a:hover {
+      /* background-color: #ddd; */
+      color: #3c4d8d;
+    }
+
+    .row {
+
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .side {
+
+      flex: 10%;
+      background-color: #3c4d8d;
+      /* background-color: #f1f1f1; */
+      padding: 20px;
+      height: 700px;
+
+    }
+
+    .main {
+
+      flex: 90%;
+      background-color: white;
+      padding: 40px;
+
+    }
+
+    /* .fakeimg {
+  background-color: #aaa;
+  float: right;
+  width: 100%;
+  padding: 20px;  } */
+
+    /* .footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+} */
+
+    @media screen and (max-width:700px) {
+
+      .row,
+      .navbar {
+        flex-direction: column;
+      }
+
+    }
+
+    #header1 {
+      position: absolute;
+      left: 80px;
+      top: 40px;
+
+
+    }
+
+    #img1 {
+      float: left;
+      border: 5px #3c4d8d solid;
+      margin: 10px;
+      size: 20%;
+
+    }
+
+    #img2 {
+      float: right;
+      border: 5px #3c4d8d solid;
+      margin: 10px;
+      size: 20%;
+    }
+
+    .p1 {
+      line-height: 30px;
+    }
+
+    /* Button Styles */
+    .custom-button {
+      /* display: inline-block; */
+      padding: 5px 20px;
+      font-size: 16px;
+      text-align: center;
+      text-decoration: none;
+      background-color: #3c4e8de9;
+      color: #fff;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Button Hover Animation */
+    .custom-button:hover {
+      background-color: #2980b9;
+    }
+
+    .boxForTeacher {
+      position: absolute;
+      top: 1000px;
+      height: 600px;
+      width: 1236px;
+      background-color: whitesmoke;
+      right: 80px;
+      border-radius: 12px;
+      padding-bottom: 12px;
+    }
+
+
+    .boxForTeIn h3,
+    .boxForTeIn2 h3 {
+      padding-top: 20px;
+    }
+
+    .boxForTeIn {
+      height: 209px;
+      width: 199.2px;
+      bottom: 307px;
+      text-align: center;
+      position: inherit;
+      background-color: #346852;
+      border-radius: 5px;
+    }
+
+    .boxForTeIn2 {
+      height: 209px;
+      width: 199.2px;
+      bottom: 35px;
+      text-align: center;
+      position: inherit;
+      background-color: #836338;
+      border-radius: 5px;
+    }
+
+    #BoxForIn1,
+    #BoxForIn2,
+    #BoxForIn3 {
+      width: 100%;
+      background-color: #3c4d8d;
+      position: inherit;
+    }
+
+    #BoxForIn1 {
+      border-radius: 12px 12px 0px 0px;
+      height: 50px;
+      top: 0px;
+      text-align: center;
+      color: white;
+    }
+
+    #BoxForIn3 {
+      border-radius: 0px 0px 12px 12px;
+    }
+
+    #BoxForIn2,
+    #BoxForIn3 {
+      height: 70px;
+    }
+
+    #BoxForIn13,
+    #BoxForIn8 {
+      left: 996.8px;
+    }
+
+    #BoxForIn12,
+    #BoxForIn7 {
+      left: 757.6px;
+    }
+
+    #BoxForIn11,
+    #BoxForIn6 {
+      left: 518.4px;
+    }
+
+    #BoxForIn10,
+    #BoxForIn5 {
+      left: 279.2px;
+    }
+
+    #BoxForIn9,
+    #BoxForIn4 {
+      left: 40px;
+    }
+
+    /* #Faculty{
+      position: absolute;
+      top: 1000px;
+      right: 100px;
+
+    } */
+  </style>
+</head>
+
+<body>
+  <!-- Note -->
+  <!-- <div style="background:yellow;padding:5px">
+  <h4 style="text-align:center">Resize the browser window to see the responsive effect.</h4>
+</div> -->
+
+  <!-- Header -->
+  <div class="header">
+    <h1> Mining Engineering </h1>
+    <img id="header1" src="./logo-mpuat.png" alt="Image">
+    <!-- <p>With a <b>flexible</b> layout.</p> -->
+  </div>
+
+  <!-- Navigation Bar -->
+  <div class="navbar" id="navbar1">
+    <a href="./index.html">Home</a>
+    <a href="https://www.ctae.ac.in/singlePage.php?id=56&type=DP">Courses</a>
+    <a href="https://www.ctae.ac.in/singlePage.php?id=4&type=DP ">Admission</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <!-- The flexible grid (content) -->
+  <div class="row">
+    <div class="side">
+      <p><a href="#Faculty" class="custom-button">FACULTY</a></p>
+      <!-- <h2>About Me</h2>
+    <h5>Head Of Department:</h5>
+    <div class="fakeimg" style="height:200px;"></div>
+    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    <h3>More Text</h3>
+    <p>Lorem ipsum dolor sit ame.</p>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <div class="fakeimg" style="height:60px;">Image</div> -->
+      <!-- <h2>About Me</h2>
+    <h5>Head Of Department:</h5>
+    <div class="fakeimg" style="height:200px;"></div>
+    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    <h3>More Text</h3>
+    <p>Lorem ipsum dolor sit ame.</p>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <div class="fakeimg" style="height:60px;">Image</div> -->
+    </div>
+    <div class="main">
+      <h2>ABOUT DEPARTMENT</h2>
+      <!-- <h5>Title description, Dec 7, 2017</h5> -->
+      <div class="fakeimg">
+        <p> <img id="img1" src="./headMining.jpg" alt="Image" style="height: 300px;"></p>
+        <p class="p1">Department of Electronics & Communication Engineering was established in 2006 and is committed to
+          impart quality technical exposure tuned to the latest technological advancement in core Electronics &
+          Telecommunication sector, Electronics System Design & Manufacturing (ESDM) sector, & Electronics Aided IT
+          sector, with emphasize on integration of technologies viz. VLSI,Microelectronics, Microcontroller, RF, IOT’s,
+          Senors, Embedded System, etc..</p>
+        <p><img id="img2" src="./miningBuilding.jpg" style="width: 400px;" alt="Image"></p>
+        <p class="p1">The Department of Electronics & Communication Engineering, College of Technology & Engineering,
+          Udaipur is one of the high impact technology Centres of the country, committed to impart quality technical
+          exposure to the students. The department offers - B.Tech; M.Tech; & PhD programmes in Electronics &
+          Communication Engineering.The department has signed MOUs with CEERI Pilani, and Texas Instruments, USA in
+          order to promote collaborative research and to ensure industrial exposure to students, Besides, extra mural
+          funds through R&D Projects of about Rs 1.65 Crore has been raised from various funding agencies like DeitY,
+          AICTE, & DST, with significant research contributions for contemporary technologies. The students of the
+          department have exhibited excellence in academics and co-curricular areas at international and national levels
+          and are serving in leading international and national organizations.</p>
+        <p class="p1">The vision of the department is to become a centre of excellence for development of environment
+          friendly cutting edge technologies for all domains of Electronics & Communication Engineering and be
+          recognized as the focal point for catalyzing the growth of the technology and to produce skilful and high
+          quality engineers to suit the industry and the society.</p>
+        <div class="boxForTeacher" id="Faculty">
+          <div id="BoxForIn1">
+            <h2>Faculties</h2>
+          </div>
+          <div id="BoxForIn2" style="top: 258px;"></div>
+          <div id="BoxForIn3" style="bottom:0px;"></div>
+
+          <div class="boxForTeIn" id="BoxForIn4">
+            <h3> Dr. Anupam Bhatnagar</h3>
+            <h5>(Professor & Head)</h5>
+            <h6> Ph.D. M.Tech. (IIT, Kharagpur)</h6>
+          </div>
+          <div class="boxForTeIn" id="BoxForIn5">
+            <h3> Dr. Vivek Meena</h3>
+            <h5> 3 Years exp.</h5>
+            <h6>
+              PhD <br><br></h6>
+          </div>M.Tech.- Mine Environment (IIT-BHU Varanasi)
+          <div class="boxForTeIn" id="BoxForIn6">
+            <h3> Dr. Vikram Seervi</h3>
+            <h5>
+              2 Years of exp.</h5>
+            <h6>
+              Ph.D.-Mine Planning (IIT-BHU Varanasi)</h6>
+          </div>
+          <div class="boxForTeIn" id="BoxForIn7">
+            <h3>
+              Dr. S.C. Jain</h3>
+            <h5>
+              Professor (Retd.)</h5>
+            <h6>
+              Ph.D. (Mining Engg.) MPUAT Udaipur, M.Tech. (Mine Planning) I.T. BHU, Varanasi</h6>
+          </div>
+          <div class="boxForTeIn" id="BoxForIn8">
+            <h3>
+
+              Dr. Vinod Kumar Mehta</h3>
+            <h5> 40 years exp.</h5>
+            <h6>
+
+              Ph.D., MBA</h6>
+          </div>
+          <div class="boxForTeIn2" id="BoxForIn9">
+            <h3>
+              	
+Harish Kumar Vyas</h3>
+            <h5> 35 years exp.</h5>
+            <h6>
+              	
+B. Tech. (Mining), First Class Manager's Certificate Holder, MBA</h6>
+          </div>
+          <div class="boxForTeIn2" id="BoxForIn10">
+            <h3> Arun Harkawat</h3>
+            <h5>
+              B. Tech. (Mining), MTech(Mining), PG Diploma in Ecology & Environment, First Class Manager's Certificate Holder.</h5>
+          </div>
+          <div class="boxForTeIn2" id="BoxForIn11">
+            <h3>Hemant Vaishnav</h3>
+            <h5> M. Sc. (Geology)</h5>
+          </div>
+          <div class="boxForTeIn2" id="BoxForIn12">
+            <h3> Kriti Sharma</h3>
+            <h5> 4 years exp.</h5>
+            <h6>M. Tech.(CSE), B. Tech. (IT)</h6>
+          </div>
+          <div class="boxForTeIn2" id="BoxForIn13">
+            <h3>Pallavi Joshi</h3>
+            <h5> 12 years exp.</h5>
+            <h6> M. Tech. (IT), B. Tech. (CSE)</h6>
+          </div>
+        </div>
+      </div>
+
+      <!-- <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <br>
+    <h2>TITLE HEADING</h2>
+    <h5>Title description, Sep 2, 2017</h5> -->
+
+
+      <!-- <div class="fakeimg" style="height:200px;">Image</div> -->
+      <!-- <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p> -->
+
+    </div>
+
+  </div>
+
+
+  <!-- Footer -->
+  <!-- <div class="footer">
+  <h2>Footer</h2>
+</div> -->
+
+</body>
+
+</html>
